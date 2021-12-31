@@ -79,13 +79,13 @@
         container.className = "unity-mobile";
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
-        config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "1280px";
         canvas.style.height = "720px";
       }
       loadingBar.style.display = "block";
+      config.devicePixelRatio = 1;
 
       var script = document.createElement("script");
       script.src = loaderUrl;
